@@ -28,15 +28,15 @@ Route::middleware("auth")->group(function () {
 
     // tables
     Route::get('/tables/basic', $controller_path . '\tables\Basic@index')->name('tables-basic');
-    Route::get('/tables/placement', $controller_path . '\tables\Placement@index')->name('placement');
-    Route::get('/tables/classification', $controller_path . '\tables\Classification@index')->name('classification');
-    Route::get('/tables/tutor', $controller_path . '\tables\Tutor@index')->name('tutor');
+    Route::get('/tables/placement', $controller_path . '\tables\PlacementController@index')->name('placement');
+    Route::get('/tables/classification', $controller_path . '\tables\ClassificationController@index')->name('classification');
+    Route::get('/tables/tutor', $controller_path . '\tables\TutorController@index')->name('tutor');
     Route::get('/tables/student', $controller_path . '\tables\StudentController@index')->name('student');
-    Route::get('/tables/kartukendali', $controller_path . '\tables\KartuKendali@index')->name('kartukendali');
-    Route::get('/tables/jadwal', $controller_path . '\tables\Jadwal@index')->name('jadwal');
-    Route::get('/tables/quiz', $controller_path . '\tables\Quiz@index')->name('quiz');
-    Route::get('/tables/nilai', $controller_path . '\tables\Nilai@index')->name('nilai');
-    Route::get('/tables/sertifikat', $controller_path . '\tables\Sertifikat@index')->name('sertifikat');
+    Route::get('/tables/kartukendali', $controller_path . '\tables\KartuKendaliController@index')->name('kartukendali');
+    Route::get('/tables/jadwal', $controller_path . '\tables\JadwalController@index')->name('jadwal');
+    Route::get('/tables/quiz', $controller_path . '\tables\QuizController@index')->name('quiz');
+    Route::get('/tables/nilai', $controller_path . '\tables\NilaiController@index')->name('nilai');
+    Route::get('/tables/sertifikat', $controller_path . '\tables\SertifikatController@index')->name('sertifikat');
 
     //student
     Route::get('/student', $controller_path . '\tables\StudentController@index')->name('student');
@@ -99,4 +99,3 @@ Route::get('/forms/input-groups', $controller_path . '\form_elements\InputGroups
 // form layouts
 Route::get('/form/layouts-vertical', $controller_path . '\form_layouts\VerticalForm@index')->name('form-layouts-vertical');
 Route::get('/form/layouts-horizontal', $controller_path . '\form_layouts\HorizontalForm@index')->name('form-layouts-horizontal');
-

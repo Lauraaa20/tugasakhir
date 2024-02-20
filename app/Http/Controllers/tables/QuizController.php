@@ -4,11 +4,13 @@ namespace App\Http\Controllers\tables;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Quiz;
 
-class Jadwal extends Controller
+class QuizController extends Controller
 {
     public function index()
     {
-        return view('content.tables.jadwal');
+        $quiz = Quiz::all();
+        return view('content.quiz.index', compact('quiz'));
     }
 }

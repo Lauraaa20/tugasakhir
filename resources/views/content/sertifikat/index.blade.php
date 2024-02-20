@@ -1,6 +1,6 @@
 @extends('layouts/contentNavbarLayout')
 
-@section('title', 'Tables - Kartu Kendali')
+@section('title', 'Tables - Sertifikat')
 
 @section('content')
 <h4 class="fw-bold py-3 mb-4">
@@ -9,24 +9,23 @@
 
 <!-- Responsive Table -->
 <div class="card">
-    <h5 class="card-header">Kartu Kendali</h5>
+    <h5 class="card-header">Sertifikat</h5>
     <div class="table-responsive text-nowrap">
         <table class="table">
             <thead>
                 <tr class="text-nowrap">
                     <th>#</th>
-                    <th>Soal</th>
-                    <th>Jawaban</th>
-                    <th>Jawaban Benar</th>
+                    <th>Nama</th>
+                    <th>Sertifikat</th>
                     <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
+                @foreach ($sertifikat as $record)
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Table cell</td>
-                    <td>Table cell</td>
-                    <td>Table cell</td>
+                    <th scope="row"></th>
+                    <td>{{$record->nama}}</td>
+                    <td>{{$record->sertifikat}}</td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Actions">
                             <a href="" class="btn btn-blue"><i class="bx bx-edit-alt"></i> Edit</a>
@@ -38,6 +37,7 @@
                         </div>
                     </td>
                 </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

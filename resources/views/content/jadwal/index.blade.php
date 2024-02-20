@@ -15,18 +15,21 @@
             <thead>
                 <tr class="text-nowrap">
                     <th>#</th>
-                    <th>Soal</th>
-                    <th>Jawaban</th>
-                    <th>Jawaban Benar</th>
+                    <th>Tutor</th>
+                    <th>Mapel</th>
+                    <th>Kelas</th>
+                    <th>Jam</th>
                     <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
+                @foreach ($jadwal as $record)
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Table cell</td>
-                    <td>Table cell</td>
-                    <td>Table cell</td>
+                    <th scope="row"></th>
+                    <td>{{$record->tutor}}</td>
+                    <td>{{$record->mapel}}</td>
+                    <td>{{$record->kelas}}</td>
+                    <td>{{$record->jam}}</td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Actions">
                             <a href="" class="btn btn-blue"><i class="bx bx-edit-alt"></i> Edit</a>
@@ -38,6 +41,7 @@
                         </div>
                     </td>
                 </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

@@ -14,23 +14,20 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th>#</th>
                     <th>Soal</th>
                     <th>Jawaban</th>
                     <th>Jawaban Benar</th>
                     <th>Actions</th>
                 </tr>
             </thead>
-            <tbody class="table-border-bottom-0">
+            <tbody>
+                @foreach ($placement as $record)
                 <tr>
-                    <td>Siapa Nama Kamu?</td>
-                    <td>
-                        A. Laura
-                        B. Cinta
-                        C. Cantik
-                    </td>
-                    <td>
-                        A.Laura
-                    </td>
+                    <th scope="row"></th>
+                    <td>{{$record->soal}}</td>
+                    <td>{{$record->jawaban}}</td>
+                    <td>{{$record->jawaban_benar}}</td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Actions">
                             <a href="" class="btn btn-blue"><i class="bx bx-edit-alt"></i> Edit</a>
@@ -42,6 +39,7 @@
                         </div>
                     </td>
                 </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

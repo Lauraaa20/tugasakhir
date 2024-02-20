@@ -3,12 +3,14 @@
 namespace App\Http\Controllers\tables;
 
 use App\Http\Controllers\Controller;
+use App\Models\Nilai;
 use Illuminate\Http\Request;
 
-class KartuKendali extends Controller
+class NilaiController extends Controller
 {
     public function index()
     {
-        return view('content.tables.kartukendali');
+        $nilai = Nilai::all();
+        return view('content.nilai.index', compact('nilai'));
     }
 }
