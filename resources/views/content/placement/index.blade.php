@@ -4,7 +4,7 @@
 
 @section('content')
 <h4 class="fw-bold py-3 mb-4">
-    <span class="text-muted fw-light">Tables </span>
+    <span class="text-muted fw-light">Tables Placement Tes</span>
 </h4>
 
 <!-- Basic Bootstrap Table -->
@@ -19,6 +19,11 @@
                     <th>Jawaban</th>
                     <th>Jawaban Benar</th>
                     <th>Actions</th>
+                    <th>
+                        <a href="{{ route('placement.create') }}">
+                            <i class='bx bx-plus'></i>
+                        </a>
+                    </th>
                 </tr>
             </thead>
             <tbody>

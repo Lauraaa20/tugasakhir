@@ -13,4 +13,9 @@ class ClassificationController extends Controller
         $classification = Classification::all();
         return view('content.classification.index', compact('classification'));
     }
+
+    public function create()
+    {
+        return view('content.classification.create');
+    }
 }

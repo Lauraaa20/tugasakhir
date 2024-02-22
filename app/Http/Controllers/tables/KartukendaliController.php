@@ -13,4 +13,9 @@ class KartuKendaliController extends Controller
         $kartukendali = KartuKendali::all();
         return view('content.kartukendali.index', compact('kartukendali'));
     }
+
+    public function create()
+    {
+        return view('content.kartukendali.create');
+    }
 }

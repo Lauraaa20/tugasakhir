@@ -13,4 +13,9 @@ class SertifikatController extends Controller
         $sertifikat = Sertifikat::all();
         return view('content.sertifikat.index', compact('sertifikat'));
     }
+
+    public function create()
+    {
+        return view('content.sertifikat.create');
+    }
 }

@@ -13,4 +13,9 @@ class TutorController extends Controller
         $tutor = Tutor::all();
         return view('content.tutor.index', compact('tutor'));
     }
+
+    public function create()
+    {
+        return view('content.tutor.create');
+    }
 }

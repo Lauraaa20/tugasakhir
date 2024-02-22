@@ -13,4 +13,9 @@ class NilaiController extends Controller
         $nilai = Nilai::all();
         return view('content.nilai.index', compact('nilai'));
     }
+
+    public function create()
+    {
+        return view('content.nilai.create');
+    }
 }

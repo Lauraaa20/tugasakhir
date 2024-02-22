@@ -4,7 +4,7 @@
 
 @section('content')
 <h4 class="fw-bold py-3 mb-4">
-    <span class="text-muted fw-light">Tables </span>
+    <span class="text-muted fw-light">Tables Jadwal</span>
 </h4>
 
 <!-- Responsive Table -->
@@ -20,6 +20,11 @@
                     <th>Kelas</th>
                     <th>Jam</th>
                     <th>Actions</th>
+                    <th>
+                        <a href="{{ route('jadwal.create') }}">
+                            <i class='bx bx-plus'></i>
+                        </a>
+                    </th>
                 </tr>
             </thead>
             <tbody>

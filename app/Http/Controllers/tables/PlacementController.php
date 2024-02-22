@@ -13,4 +13,9 @@ class PlacementController extends Controller
         $placement = Placement::all();
         return view('content.placement.index', compact('placement'));
     }
+
+    public function create()
+    {
+        return view('content.placement.create');
+    }
 }

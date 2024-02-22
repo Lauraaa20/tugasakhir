@@ -8,7 +8,7 @@
     },
     {
       "url": "tables/placement",
-      "icon": "menu-icon tf-icons bx bx-detail",
+      "icon": "menu-icon tf-icons bx bx-edit",
       "name": "Placement Tes",
       "slug": "placement"
     },
@@ -20,45 +20,48 @@
     },
     {
       "url": "tables/tutor",
-      "icon": "menu-icon tf-icons bx bx-detail",
+      "icon": "menu-icon tf-icons bx bx-table",
       "name": "Tutor",
       "slug": "tutor"
     },
     {
       "url": "tables/student",
-      "icon": "menu-icon tf-icons bx bx-detail",
+      "icon": "menu-icon tf-icons bx bx-table",
       "name": "Student",
       "slug": "student"
     },
     {
       "url": "tables/kartukendali",
-      "icon": "menu-icon tf-icons bx bx-detail",
+      "icon": "menu-icon tf-icons bx bx-food-menu",
       "name": "Kartu Kendali",
       "slug": "kartukendali"
     },
     {
       "url": "tables/jadwal",
-      "icon": "menu-icon tf-icons bx bx-detail",
+      "icon": "menu-icon tf-icons bx bx-food-menu",
       "name": "Jadwal",
       "slug": "jadwal"
     },
     {
       "url": "tables/quiz",
-      "icon": "menu-icon tf-icons bx bx-detail",
+      "icon": "menu-icon tf-icons bx bx-edit",
       "name": "Quiz",
       "slug": "quiz"
     },
     {
       "url": "tables/nilai",
-      "icon": "menu-icon tf-icons bx bx-detail",
+      "icon": "menu-icon tf-icons bx bxs-graduation",
       "name": "Nilai",
       "slug": "nilai"
     },
     {
       "url": "tables/sertifikat",
-      "icon": "menu-icon tf-icons bx bx-detail",
+      "icon": "menu-icon tf-icons bx bx-file",
       "name": "Sertifikat",
       "slug": "sertifikat"
+    },
+    {
+      "menuHeader": "Pages"
     },
     {
       "name": "Layouts",
@@ -92,9 +95,6 @@
           "target": "_blank"
         }
       ]
-    },
-    {
-      "menuHeader": "Pages"
     },
     {
       "name": "Account Settings",

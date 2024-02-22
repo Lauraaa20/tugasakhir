@@ -28,20 +28,44 @@ Route::middleware("auth")->group(function () {
 
     // tables
     Route::get('/tables/basic', $controller_path . '\tables\Basic@index')->name('tables-basic');
-    Route::get('/tables/placement', $controller_path . '\tables\PlacementController@index')->name('placement');
-    Route::get('/tables/classification', $controller_path . '\tables\ClassificationController@index')->name('classification');
-    Route::get('/tables/tutor', $controller_path . '\tables\TutorController@index')->name('tutor');
     Route::get('/tables/student', $controller_path . '\tables\StudentController@index')->name('student');
-    Route::get('/tables/kartukendali', $controller_path . '\tables\KartuKendaliController@index')->name('kartukendali');
-    Route::get('/tables/jadwal', $controller_path . '\tables\JadwalController@index')->name('jadwal');
-    Route::get('/tables/quiz', $controller_path . '\tables\QuizController@index')->name('quiz');
-    Route::get('/tables/nilai', $controller_path . '\tables\NilaiController@index')->name('nilai');
-    Route::get('/tables/sertifikat', $controller_path . '\tables\SertifikatController@index')->name('sertifikat');
+
+    //placement
+    Route::get('/tables/placement', $controller_path . '\tables\PlacementController@index')->name('placement');
+    Route::get('/tables/placement/create', $controller_path . '\tables\PlacementController@create')->name('placement.create');
+
+    //classification
+    Route::get('/tables/classification', $controller_path . '\tables\ClassificationController@index')->name('classification');
+    Route::get('/tables/classification/create', $controller_path . '\tables\ClassificationController@create')->name('classification.create');
+
+    //tutor
+    Route::get('/tables/tutor', $controller_path . '\tables\TutorController@index')->name('tutor');
+    Route::get('/tables/tutor/create', $controller_path . '\tables\TutorController@create')->name('tutor.create');
 
     //student
     Route::get('/student', $controller_path . '\tables\StudentController@index')->name('student');
     Route::get('/student/create', $controller_path . '\tables\StudentController@create')->name('student.create');
     Route::post('/student/edit', $controller_path . '\tables\StudentController@edit')->name('student.edit');
+
+    //kartukendali
+    Route::get('/tables/kartukendali', $controller_path . '\tables\KartuKendaliController@index')->name('kartukendali');
+    Route::get('/tables/kartukendali/create', $controller_path . '\tables\KartuKendaliController@create')->name('kartukendali.create');
+
+    //jadwal
+    Route::get('/tables/jadwal', $controller_path . '\tables\JadwalController@index')->name('jadwal');
+    Route::get('/tables/jadwal/create', $controller_path . '\tables\JadwalController@create')->name('jadwal.create');
+
+    //quiz
+    Route::get('/tables/quiz', $controller_path . '\tables\QuizController@index')->name('quiz');
+    Route::get('/tables/quiz/create', $controller_path . '\tables\QuizController@create')->name('quiz.create');
+
+    //nilai
+    Route::get('/tables/nilai', $controller_path . '\tables\NilaiController@index')->name('nilai');
+    Route::get('/tables/nilai/create', $controller_path . '\tables\NilaiController@create')->name('nilai.create');
+
+    //sertifikat
+    Route::get('/tables/sertifikat', $controller_path . '\tables\SertifikatController@index')->name('sertifikat');
+    Route::get('/tables/sertifikat/create', $controller_path . '\tables\SertifikatController@create')->name('sertifikat.create');
 });
 
 

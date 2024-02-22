@@ -4,7 +4,7 @@
 
 @section('content')
 <h4 class="fw-bold py-3 mb-4">
-    <span class="text-muted fw-light">Tables </span>
+    <span class="text-muted fw-light">Tables Sertifikat</span>
 </h4>
 
 <!-- Responsive Table -->
@@ -18,6 +18,11 @@
                     <th>Nama</th>
                     <th>Sertifikat</th>
                     <th>Actions</th>
+                    <th>
+                        <a href="{{ route('sertifikat.create') }}">
+                            <i class='bx bx-plus'></i>
+                        </a>
+                    </th>
                 </tr>
             </thead>
             <tbody>

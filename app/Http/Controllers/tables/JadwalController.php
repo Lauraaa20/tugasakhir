@@ -13,4 +13,9 @@ class JadwalController extends Controller
         $jadwal = Jadwal::all();
         return view('content.jadwal.index', compact('jadwal'));
     }
+
+    public function create()
+    {
+        return view('content.jadwal.create');
+    }
 }

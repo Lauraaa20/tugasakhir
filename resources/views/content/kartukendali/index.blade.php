@@ -4,7 +4,7 @@
 
 @section('content')
 <h4 class="fw-bold py-3 mb-4">
-    <span class="text-muted fw-light">Tables </span>
+    <span class="text-muted fw-light">Tables Kartu Kendali</span>
 </h4>
 
 <!-- Responsive Table -->
@@ -25,6 +25,11 @@
                     <th>Pertemuan 7</th>
                     <th>Pencapaian</th>
                     <th>Actions</th>
+                    <th>
+                        <a href="{{ route('kartukendali.create') }}">
+                            <i class='bx bx-plus'></i>
+                        </a>
+                    </th>
                 </tr>
             </thead>
             <tbody>

@@ -12,4 +12,10 @@ class StudentController extends Controller
         $siswa = Siswa::all();
         return view('content.student.index', compact('siswa'));
     }
+
+    public function create()
+    {
+        // $siswa = Siswa::all();
+        return view('content.student.create');
+    }
 }

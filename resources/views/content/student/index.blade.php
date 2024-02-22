@@ -6,6 +6,9 @@
 
 @section('content')
 <!-- Your existing content goes here -->
+<h4 class="fw-bold py-3 mb-4">
+    <span class="text-muted fw-light">Tables Student</span>
+</h4>
 
 <div class="card">
     <h5 class="card-header">Student</h5>
@@ -23,6 +26,11 @@
                     <th>Pekerjaan Ortu</th>
                     <th>Kelas</th>
                     <th>Actions</th>
+                    <th>
+                        <a href="{{ route('student.create') }}">
+                            <i class='bx bx-plus'></i>
+                        </a>
+                    </th>
                 </tr>
             </thead>
             <tbody>
@@ -41,8 +49,7 @@
                         <div class="btn-group" role="group" aria-label="Actions">
                             <a href="" class="btn btn-blue"><i class="bx bx-edit-alt"></i> Edit</a>
                             <form action=>
-                                <button type="submit" class="btn btn-white"
-                                    onclick="return confirm('Are you sure you want to delete this classification?')">
+                                <button type="submit" class="btn btn-white" onclick="return confirm('Are you sure you want to delete this classification?')">
                                     <i class="bx bx-trash"></i> Delete
                                 </button>
                             </form>
