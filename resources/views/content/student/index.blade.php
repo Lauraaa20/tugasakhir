@@ -16,7 +16,7 @@
         <table class="table">
             <thead>
                 <tr class="text-nowrap">
-                    <th>#</th>
+                    <th>No</th>
                     <th>Nama</th>
                     <th>NIK</th>
                     <th>Alamat</th>
@@ -36,7 +36,7 @@
             <tbody>
                 @foreach ($siswa as $record)
                 <tr>
-                    <th scope="row"></th>
+                    <th scope="row">{{$record->id}}</th>
                     <td>{{$record->nama}}</td>
                     <td>{{$record->nik}}</td>
                     <td>{{$record->alamat}}</td>

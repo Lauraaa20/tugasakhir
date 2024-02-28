@@ -14,7 +14,7 @@
         <table class="table">
             <thead>
                 <tr class="text-nowrap">
-                    <th>#</th>
+                    <th>No</th>
                     <th>Nama</th>
                     <th>Sertifikat</th>
                     <th>Actions</th>
@@ -28,7 +28,7 @@
             <tbody>
                 @foreach ($sertifikat as $record)
                 <tr>
-                    <th scope="row"></th>
+                    <th scope="row">{{$record->id}}</th>
                     <td>{{$record->nama}}</td>
                     <td>{{$record->sertifikat}}</td>
                     <td>

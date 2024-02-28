@@ -14,7 +14,7 @@
         <table class="table">
             <thead>
                 <tr class="text-nowrap">
-                    <th>#</th>
+                    <th>No</th>
                     <th>Nama</th>
                     <th>Pertemuan 1</th>
                     <th>Pertemuan 2</th>
@@ -35,7 +35,7 @@
             <tbody>
                 @foreach ($kartukendali as $record)
                 <tr>
-                    <th scope="row"></th>
+                    <th scope="row">{{$record->id}}</th>
                     <td>{{$record->nama}}</td>
                     <td>{{$record->pert_1}}</td>
                     <td>{{$record->pert_2}}</td>

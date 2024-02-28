@@ -14,7 +14,7 @@
         <table class="table">
             <thead>
                 <tr class="text-nowrap">
-                    <th>#</th>
+                    <th>No</th>
                     <th>Tutor</th>
                     <th>Mapel</th>
                     <th>Kelas</th>
@@ -30,7 +30,7 @@
             <tbody>
                 @foreach ($jadwal as $record)
                 <tr>
-                    <th scope="row"></th>
+                    <th scope="row">{{$record->id}}</th>
                     <td>{{$record->tutor}}</td>
                     <td>{{$record->mapel}}</td>
                     <td>{{$record->kelas}}</td>

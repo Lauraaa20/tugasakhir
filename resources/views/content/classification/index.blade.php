@@ -14,7 +14,7 @@
         <table class="table">
             <thead>
                 <tr class="text-nowrap">
-                    <th>#</th>
+                    <th>No</th>
                     <th>Nama</th>
                     <th>Jenjang</th>
                     <th>Nilai</th>
@@ -30,7 +30,7 @@
             <tbody>
                 @foreach ($classification as $record)
                 <tr>
-                    <th scope="row"></th>
+                    <th scope="row">{{$record->id}}</th>
                     <td>{{$record->nama}}</td>
                     <td>{{$record->jenjang}}</td>
                     <td>{{$record->nilai}}</td>

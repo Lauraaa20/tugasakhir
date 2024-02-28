@@ -14,7 +14,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>#</th>
+                    <th>No</th>
                     <th>Soal</th>
                     <th>Jawaban</th>
                     <th>Jawaban Benar</th>
@@ -29,7 +29,7 @@
             <tbody>
                 @foreach ($placement as $record)
                 <tr>
-                    <th scope="row"></th>
+                    <th scope="row">{{$record->id}}</th>
                     <td>{{$record->soal}}</td>
                     <td>{{$record->jawaban}}</td>
                     <td>{{$record->jawaban_benar}}</td>
