@@ -10,7 +10,7 @@
     <span class="text-muted fw-light">Add Tutor</span>
 </h4>
 
-<form action="{{ route('tutor.create') }}" method="POST">
+<form action="{{ route('tutor.insert') }}" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="card">
         <div class="card-header">
@@ -32,7 +32,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="foto" class="form-label">Foto</label>
-                    <input type="text" class="form-control" id="foto" name="foto">
+                    <input type="file" class="form-control" id="foto" name="foto" accept="image/*">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>

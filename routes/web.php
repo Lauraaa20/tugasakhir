@@ -41,6 +41,8 @@ Route::middleware("auth")->group(function () {
     //tutor
     Route::get('/tables/tutor', $controller_path . '\tables\TutorController@index')->name('tutor');
     Route::get('/tables/tutor/create', $controller_path . '\tables\TutorController@create')->name('tutor.create');
+    Route::get('/tables/tutor/edit/{tutorId}', $controller_path . '\tables\TutorController@edit')->name('tutor.edit');
+
 
     //student
     Route::get('/student', $controller_path . '\tables\StudentController@index')->name('student');
