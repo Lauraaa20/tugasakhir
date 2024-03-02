@@ -10,7 +10,7 @@
     <span class="text-muted fw-light">Add Sertifikat</span>
 </h4>
 
-<form action="{{ route('sertifikat.create') }}" method="POST">
+<form action="{{ route('sertifikat.insert') }}" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="card">
         <div class="card-header">
@@ -24,7 +24,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="sertifikat" class="form-label">Sertifikat</label>
-                    <input type="text" class="form-control" id="sertifikat" name="sertifikat">
+                    <input type="file" class="form-control" id="sertifikat" name="sertifikat" accept="file/*">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>

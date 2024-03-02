@@ -41,7 +41,7 @@
                             <form action="{{route('tutor.delete', $record->id)}}" method="POST">
                                 @csrf
                                 @method("DELETE")
-                                <button type="submit" class="btn btn-white" onclick="return confirm('Apakah Kamu Yakin ?')">
+                                <button type="submit" class="btn btn-white" onclick="return confirm('Apakah Kamu Yakin?')">
                                     </i class="bx bx-trash"> Delete
                                 </button>
                             </form>

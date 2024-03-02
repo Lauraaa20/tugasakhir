@@ -10,7 +10,7 @@
     <span class="text-muted fw-light">Add Classification</span>
 </h4>
 
-<form action="{{ route('classification.create') }}" method="POST">
+<form action="{{ route('classification.insert') }}" method="POST">
     @csrf
     <div class="card">
         <div class="card-header">

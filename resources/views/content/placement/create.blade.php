@@ -10,7 +10,7 @@
     <span class="text-muted fw-light">Add Placement Tes</span>
 </h4>
 
-<form action="{{ route('placement.create') }}" method="POST">
+<form action="{{ route('placement.insert') }}" method="POST">
     @csrf
     <div class="card">
         <div class="card-header">

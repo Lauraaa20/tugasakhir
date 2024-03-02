@@ -38,12 +38,12 @@ class TutorController extends Controller
         ]);
 
         return redirect()->route("tutor")->with("success", "Data Berhasil Disimpan!");
-
     }
     public function update(Request $request, $tutorId)
     {
         $imageName = $request->nama . ".jpg";
-        $request->file("foto")->move(public_path("images/tutor"), $imageName);
+        $post = Tutor::find($tutorId);
+        $post->fill($request->input())->save();
 
         $tutor = Tutor::find($tutorId);
         $tutor->update([
@@ -65,7 +65,6 @@ class TutorController extends Controller
         try {
             unlink(public_path("images/tutor/") . $tutor->foto);
         } catch (\Exception $e) {
-
         }
 
         return redirect()->route("tutor")->with("success", "Data Berhasil Dihapus!");

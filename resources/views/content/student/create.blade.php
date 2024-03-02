@@ -10,7 +10,7 @@
     <span class="text-muted fw-light">Add Siswa</span>
 </h4>
 
-<form action="{{ route('student.create') }}" method="POST">
+<form action="{{ route('student.insert') }}" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="card">
         <div class="card-header">

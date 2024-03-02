@@ -6,12 +6,10 @@
 
 @section('content')
 <div class="card">
-    <h5 class="card-header">Edit Student</h5>
+    <h5 class="card-header">Form Edit Student</h5>
     <div class="card-body">
-        <form action="{{ route('student.edit', $student->id) }}" method="POST">
+        <form action="{{ route('student.update', $student->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
-            @method('POST')
-
             <div class="mb-3">
                 <label for="nama" class="form-label">Nama</label>
                 <input type="text" class="form-control" id="nama" name="nama" value="{{ $student->nama }}">

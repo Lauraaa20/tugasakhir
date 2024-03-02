@@ -10,7 +10,7 @@
     <span class="text-muted fw-light">Add Nilai</span>
 </h4>
 
-<form action="{{ route('nilai.create') }}" method="POST">
+<form action="{{ route('nilai.insert') }}" method="POST">
     @csrf
     <div class="card">
         <div class="card-header">
@@ -42,4 +42,4 @@
             </form>
         </div>
     </div>
-            @endsection
+    @endsection

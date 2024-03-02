@@ -47,9 +47,11 @@
                     <td>{{$record->pencapaian}}</td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Actions">
-                            <a href="" class="btn btn-blue"><i class="bx bx-edit-alt"></i> Edit</a>
-                            <form action=>
-                                <button type="submit" class="btn btn-white" onclick="return confirm('Are you sure you want to delete this classification?')">
+                            <a href="{{route('kartukendali.edit', $record->id)}}" class="btn btn-blue"><i class="bx bx-edit-alt"></i> Edit</a>
+                            <form action="{{route('kartukendali.delete', $record->id)}}" method="POST">
+                                @csrf
+                                @method("DELETE")
+                                <button type="submit" class="btn btn-white" onclick="return confirm('Apakah Kamu Yakin?')">
                                     <i class="bx bx-trash"></i> Delete
                                 </button>
                             </form>

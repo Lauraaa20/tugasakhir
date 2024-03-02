@@ -10,7 +10,7 @@
     <span class="text-muted fw-light">Add Kartu Kendali</span>
 </h4>
 
-<form action="{{ route('kartukendali.create') }}" method="POST">
+<form action="{{ route('kartukendali.insert') }}" method="POST">
     @csrf
     <div class="card">
         <div class="card-header">

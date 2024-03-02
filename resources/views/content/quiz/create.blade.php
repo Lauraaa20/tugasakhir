@@ -10,7 +10,7 @@
     <span class="text-muted fw-light">Add Quiz</span>
 </h4>
 
-<form action="{{ route('quiz.create') }}" method="POST">
+<form action="{{ route('quiz.insert') }}" method="POST">
     @csrf
     <div class="card">
         <div class="card-header">

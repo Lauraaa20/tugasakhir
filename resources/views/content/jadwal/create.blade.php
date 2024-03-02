@@ -10,7 +10,7 @@
     <span class="text-muted fw-light">Add Jadwal</span>
 </h4>
 
-<form action="{{ route('jadwal.create') }}" method="POST">
+<form action="{{ route('jadwal.insert') }}" method="POST">
     @csrf
     <div class="card">
         <div class="card-header">
