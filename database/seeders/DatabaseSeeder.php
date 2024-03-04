@@ -89,7 +89,7 @@ class DatabaseSeeder extends Seeder
                 "pert_5" => "ceklis",
                 "pert_6" => "ceklis",
                 "pert_7" => "ceklis",
-                "pencapian" => "tuntas",
+                "pencapaian" => "tuntas",
             ]);
 
             Jadwal::create([

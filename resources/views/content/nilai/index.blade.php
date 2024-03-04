@@ -36,9 +36,9 @@
                     <td>{{$record->writing}}</td>
                     <td>{{$record->reading}}</td>
                     <td>{{$record->listening}}</td>
-                    <td>{{$record->rata_rata}}</td>
+                    <td>{{printf("%.1f", ($record->writing + $record->reading + $record->listening) / 3)}}</td>
                     <td>
-                    <div class="btn-group" role="group" aria-label="Actions">
+                        <div class="btn-group" role="group" aria-label="Actions">
                             <a href="{{route('nilai.edit', $record->id)}}" class="btn btn-blue"><i class="bx bx-edit-alt"></i> Edit</a>
                             <form action="{{route('nilai.delete', $record->id)}}" method="POST">
                                 @csrf

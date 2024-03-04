@@ -39,15 +39,15 @@ class SertifikatController extends Controller
     }
     public function update(Request $request, $sertifikatId)
     {
-        $fileName = $request->nama . ".pdf";
-        $post = Sertifikat::find($sertifikatId);
-        $post->fill($request->input())->save();
+        if ($request->sertifikat) {
+            $fileName = $request->nama . ".pdf";
+            $request->file("sertifikat")->move(public_path("file/sertifikat"), $fileName);
+
+            $request->merge(["sertifikat" => $fileName]);
+        }
 
         $sertifikat = Sertifikat::find($sertifikatId);
-        $sertifikat->update([
-            "nama" => $request->nama,
-            "foto" => $fileName,
-        ]);
+        $sertifikat->fill($request->input())->save();
 
         return redirect()->route("sertifikat")->with("success", "Data Berhasil Diperbarui!");
     }
@@ -59,7 +59,7 @@ class SertifikatController extends Controller
 
         $sertifikat->delete();
         try {
-            unlink(public_path("file/sertifikat/") . $sertifikat->file);
+            unlink(public_path("file/sertifikat/") . $sertifikat->sertifikat);
         } catch (\Exception $e) {
         }
 

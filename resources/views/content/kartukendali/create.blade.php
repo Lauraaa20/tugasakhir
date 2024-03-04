@@ -22,37 +22,20 @@
                     <label for="nama" class="form-label">Nama</label>
                     <input type="text" class="form-control" id="nama" name="nama">
                 </div>
+                @for ($i = 1; $i < 8; $i++)
+                    <div class="mb-3">
+                        <p>Pertemuan {{$i}}</p>
+                        <input type="radio" id="pert_{{$i}}_hadir" name="pert_{{$i}}" value="hadir">
+                        <label for="pert_{{$i}}_hadir" class="form-label">Hadir</label>
+                        <input type="radio" id="pert_{{$i}}_izin" name="pert_{{$i}}" value="izin">
+                        <label for="pert_{{$i}}_izin" class="form-label">Izin</label>
+                        <input type="radio" id="pert_{{$i}}_alpha" name="pert_{{$i}}" value="alpha">
+                        <label for="pert_{{$i}}_alpha" class="form-label">Alpha</label>
+                    </div>
+                @endfor
                 <div class="mb-3">
-                    <label for="pert_1" class="form-label">Pertemuan 1</label>
-                    <input type="text" class="form-control" id="pert_1" name="pert_1">
-                </div>
-                <div class="mb-3">
-                    <label for="pert_2" class="form-label">Pertemuan 2</label>
-                    <input type="text" class="form-control" id="pert_2" name="pert_2">
-                </div>
-                <div class="mb-3">
-                    <label for="pert_3" class="form-label">Pertemuan 3</label>
-                    <input type="text" class="form-control" id="pert_3" name="pert_3">
-                </div>
-                <div class="mb-3">
-                    <label for="pert_4" class="form-label">Pertemuan 4</label>
-                    <input type="text" class="form-control" id="pert_4" name="pert_4">
-                </div>
-                <div class="mb-3">
-                    <label for="pert_5" class="form-label">Pertemuan 5</label>
-                    <input type="text" class="form-control" id="pert_5" name="pert_5">
-                </div>
-                <div class="mb-3">
-                    <label for="pert_6" class="form-label">Pertemuan 6</label>
-                    <input type="text" class="form-control" id="pert_6" name="pert_6">
-                </div>
-                <div class="mb-3">
-                    <label for="pert_7" class="form-label">Pertemuan 7</label>
-                    <input type="text" class="form-control" id="pert_7" name="pert_7">
-                </div>
-                <div class="mb-3">
-                    <label for="pencapian" class="form-label">Pencapaian</label>
-                    <input type="text" class="form-control" id="pencapian" name="pencapian">
+                    <label for="pencapaian" class="form-label">Pencapaian</label>
+                    <input type="text" class="form-control" id="pencapaian" name="pencapaian">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>

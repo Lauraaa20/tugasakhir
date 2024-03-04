@@ -41,17 +41,15 @@ class TutorController extends Controller
     }
     public function update(Request $request, $tutorId)
     {
-        $imageName = $request->nama . ".jpg";
-        $post = Tutor::find($tutorId);
-        $post->fill($request->input())->save();
-
         $tutor = Tutor::find($tutorId);
-        $tutor->update([
-            "nama" => $request->nama,
-            "nik" => $request->nik,
-            "alamat" => $request->alamat,
-            "foto" => $imageName,
-        ]);
+        if ($request->foto) {
+            $imageName = $request->nama . ".jpg";
+            $request->file("foto")->move(public_path("images/tutor"), $imageName);
+
+            $request->merge(["foto" => $imageName]);
+        }
+
+        $tutor->fill($request->input())->save();
 
         return redirect()->route("tutor")->with("success", "Data Berhasil Diperbarui!");
     }

@@ -29,14 +29,14 @@ class KartuKendaliController extends Controller
     {
         KartuKendali::create([
             "nama" => $request->nama,
-            "pertemuan1" => $request->pertemuan1,
-            "pertemuan2" => $request->pertemuan2,
-            "pertemuan3" => $request->pertemuan3,
-            "pertemuan4" => $request->pertemuan4,
-            "pertemuan5" => $request->pertemuan5,
-            "pertemuan6" => $request->pertemuan6,
-            "pertemuan7" => $request->pertemuan7,
-            "pencapaian" => $request->pencapian,
+            "pert_1" => $request->pert_1,
+            "pert_2" => $request->pert_2,
+            "pert_3" => $request->pert_3,
+            "pert_4" => $request->pert_4,
+            "pert_5" => $request->pert_5,
+            "pert_6" => $request->pert_6,
+            "pert_7" => $request->pert_7,
+            "pencapaian" => $request->pencapaian,
         ]);
 
         return redirect()->route("kartukendali")->with("success", "Data Berhasil Disimpan!");

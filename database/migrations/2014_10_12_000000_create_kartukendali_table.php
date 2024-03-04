@@ -5,8 +5,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      *
@@ -24,7 +23,7 @@ return new class extends Migration
             $table->string('pert_5');
             $table->string('pert_6');
             $table->string('pert_7');
-            $table->string('pencapian');
+            $table->string('pencapaian');
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('created_at')->nullable();
         });

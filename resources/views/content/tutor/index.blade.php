@@ -9,9 +9,14 @@
 
 <!-- Responsive Table -->
 <div class="card">
-    <h5 class="card-header">Tutor</h5>
+    <div class="d-flex align-items-center justify-content-between">
+        <h3 class="card-header">Tutor</h3>
+        <a class="card-header" href="{{ route('tutor.create') }}">
+            <i class='bx bx-plus'></i>
+        </a>
+    </div>
     <div class="table-responsive text-nowrap">
-        <table class="table">
+        <table class="table" id="datatable">
             <thead>
                 <tr class="text-nowrap">
                     <th>No</th>
@@ -20,11 +25,6 @@
                     <th>Alamat</th>
                     <th>Foto</th>
                     <th>Actions</th>
-                    <th>
-                        <a href="{{ route('tutor.create') }}">
-                            <i class='bx bx-plus'></i>
-                        </a>
-                    </th>
                 </tr>
             </thead>
             <tbody>

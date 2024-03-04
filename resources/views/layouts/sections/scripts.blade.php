@@ -4,6 +4,14 @@
 <script src="{{ asset(mix('assets/vendor/js/bootstrap.js')) }}"></script>
 <script src="{{ asset(mix('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js')) }}"></script>
 <script src="{{ asset(mix('assets/vendor/js/menu.js')) }}"></script>
+<script src="https://cdn.datatables.net/2.0.1/js/dataTables.min.js"></script>
+<script>
+    new DataTable('#datatable', {
+        info: false,
+        ordering: true,
+        paging: false
+    });
+</script>
 @yield('vendor-script')
 <!-- END: Page Vendor JS-->
 <!-- BEGIN: Theme JS-->
