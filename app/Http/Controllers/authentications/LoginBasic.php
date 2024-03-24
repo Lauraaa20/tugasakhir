@@ -20,6 +20,10 @@ class LoginBasic extends Controller
     if (Auth::attempt($credentials)) {
       $request->session()->regenerate();
       return redirect()->to('/');
+    } else {
+      return redirect()->route("auth-login-basic")->withErrors([
+        "message" => "Username/Password incorrect!"
+      ]);
     }
   }
 
