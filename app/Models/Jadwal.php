@@ -20,6 +20,7 @@ class Jadwal extends Authenticatable
     protected $table = "jadwal";
 
     protected $fillable = [
+        'user_id',
         'tutor',
         'mapel',
         'kelas',

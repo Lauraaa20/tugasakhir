@@ -31,6 +31,6 @@ class LoginBasic extends Controller
   {
     Auth::logout();
     $request->session()->regenerate();
-    return redirect()->to("/");
+    return redirect()->route("auth-login-basic");
   }
 }

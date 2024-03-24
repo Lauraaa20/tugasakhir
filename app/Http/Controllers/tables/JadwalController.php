@@ -5,12 +5,18 @@ namespace App\Http\Controllers\tables;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Jadwal;
+use Illuminate\Support\Facades\Auth;
 
 class JadwalController extends Controller
 {
     public function index()
     {
-        $jadwal = Jadwal::all();
+        $user = Auth::user();
+        if ($user->role != "Admin") {
+            $jadwal = Jadwal::where("user_id", $user->id)->get();
+        } else {
+            $jadwal = Jadwal::all();
+        }
         return view('content.jadwal.index', compact('jadwal'));
     }
 

@@ -34,48 +34,36 @@
       "url": "tables/kartukendali",
       "icon": "menu-icon tf-icons bx bx-food-menu",
       "name": "Kartu Kendali",
-      "slug": "kartukendali"
+      "slug": "kartukendali",
+      "roles": ["Siswa"]
     },
     {
       "url": "tables/jadwal",
       "icon": "menu-icon tf-icons bx bx-food-menu",
       "name": "Jadwal",
-      "slug": "jadwal"
+      "slug": "jadwal",
+      "roles": ["Siswa"]
     },
     {
       "url": "tables/quiz",
       "icon": "menu-icon tf-icons bx bx-edit",
       "name": "Quiz",
-      "slug": "quiz"
+      "slug": "quiz",
+      "roles": ["Siswa"]
     },
     {
       "url": "tables/nilai",
       "icon": "menu-icon tf-icons bx bxs-graduation",
       "name": "Nilai",
-      "slug": "nilai"
+      "slug": "nilai",
+      "roles": ["Siswa"]
     },
     {
       "url": "tables/sertifikat",
       "icon": "menu-icon tf-icons bx bx-file",
       "name": "Sertifikat",
-      "slug": "sertifikat"
-    },
-    {
-      "menuHeader": "Misc"
-    },
-    {
-      "url": "https://themeselection.com/support/",
-      "icon": "menu-icon tf-icons bx bx-support",
-      "name": "Support",
-      "slug": "support",
-      "target": "_blank"
-    },
-    {
-      "url": "https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/laravel-introduction.html",
-      "icon": "menu-icon tf-icons bx bx-file",
-      "name": "Documentation",
-      "slug": "documentation",
-      "target": "_blank"
+      "slug": "sertifikat",
+      "roles": ["Siswa"]
     }
   ]
 }

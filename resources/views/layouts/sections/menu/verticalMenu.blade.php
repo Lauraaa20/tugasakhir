@@ -56,12 +56,25 @@
 
     {{-- main menu --}}
     <li class="menu-item {{$activeClass}}">
-      <a href="{{ isset($menu->url) ? url($menu->url) : 'javascript:void(0);' }}" class="{{ isset($menu->submenu) ? 'menu-link menu-toggle' : 'menu-link' }}" @if (isset($menu->target) and !empty($menu->target)) target="_blank" @endif>
-        @isset($menu->icon)
-        <i class="{{ $menu->icon }}"></i>
-        @endisset
-        <div>{{ isset($menu->name) ? __($menu->name) : '' }}</div>
-      </a>
+      @if ($user->role == "Admin")
+        <a href="{{ isset($menu->url) ? url($menu->url) : 'javascript:void(0);' }}" class="{{ isset($menu->submenu) ? 'menu-link menu-toggle' : 'menu-link' }}" @if (isset($menu->target) and !empty($menu->target)) target="_blank" @endif>
+          @isset($menu->icon)
+          <i class="{{ $menu->icon }}"></i>
+          @endisset
+          <div>{{ isset($menu->name) ? __($menu->name) : '' }}</div>
+        </a>
+      @elseif (isset($menu->roles))
+        @foreach ($menu->roles as $role)
+          @if ($user->role == $role)
+            <a href="{{ isset($menu->url) ? url($menu->url) : 'javascript:void(0);' }}" class="{{ isset($menu->submenu) ? 'menu-link menu-toggle' : 'menu-link' }}" @if (isset($menu->target) and !empty($menu->target)) target="_blank" @endif>
+              @isset($menu->icon)
+              <i class="{{ $menu->icon }}"></i>
+              @endisset
+              <div>{{ isset($menu->name) ? __($menu->name) : '' }}</div>
+            </a>
+          @endif
+        @endforeach
+      @endif
 
       {{-- submenu --}}
       @isset($menu->submenu)

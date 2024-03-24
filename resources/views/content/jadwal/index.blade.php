@@ -20,11 +20,13 @@
                     <th>Kelas</th>
                     <th>Jam</th>
                     <th>Actions</th>
-                    <th>
-                        <a href="{{ route('jadwal.create') }}">
-                            <i class='bx bx-plus'></i>
-                        </a>
-                    </th>
+                    @if ($user->role == "Admin")
+                        <th>
+                            <a href="{{ route('jadwal.create') }}">
+                                <i class='bx bx-plus'></i>
+                            </a>
+                        </th>
+                    @endif
                 </tr>
             </thead>
             <tbody>
@@ -35,18 +37,26 @@
                     <td>{{$record->mapel}}</td>
                     <td>{{$record->kelas}}</td>
                     <td>{{$record->jam}}</td>
-                    <td>
-                        <div class="btn-group" role="group" aria-label="Actions">
-                            <a href="{{route('jadwal.edit', $record->id)}}" class="btn btn-blue"><i class="bx bx-edit-alt"></i> Edit</a>
-                            <form action="{{route('jadwal.delete', $record->id)}}" method="POST">
-                                @csrf
-                                @method("DELETE")
-                                <button type="submit" class="btn btn-white" onclick="return confirm('Apakah Kamu Yakin?')">
-                                    <i class="bx bx-trash"></i> Delete
-                                </button>
-                            </form>
-                        </div>
-                    </td>
+                    @if ($user->role == "Admin")
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Actions">
+                                <a href="{{route('jadwal.edit', $record->id)}}" class="btn btn-blue"><i class="bx bx-edit-alt"></i> Edit</a>
+                                <form action="{{route('jadwal.delete', $record->id)}}" method="POST">
+                                    @csrf
+                                    @method("DELETE")
+                                    <button type="submit" class="btn btn-white" onclick="return confirm('Apakah Kamu Yakin?')">
+                                        <i class="bx bx-trash"></i> Delete
+                                    </button>
+                                </form>
+                            </div>
+                        </td>
+                    @else
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Actions">
+                                <a href="#" class="btn btn-blue"><i class="bx bx-info-circle"></i>Detail</a>
+                            </div>
+                        </td>
+                    @endif
                 </tr>
                 @endforeach
             </tbody>
