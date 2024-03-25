@@ -23,32 +23,20 @@
                     <input type="text" class="form-control" id="nama" name="nama" value="{{$kartukendali->nama}}">
                 </div>
                 <div class="mb-3">
-                    <label for="pertemuan1" class="form-label">Pertemuan 1</label>
-                    <input type="text" class="form-control" id="pertemuan1" name="pertemuan1" value="{{$kartukendali->pertemuan1}}">
+                    <label for="minggu1" class="form-label">Minggu 1</label>
+                    <input type="text" class="form-control" id="minggu1" name="minggu1" value="{{$kartukendali->minggu1}}">
                 </div>
                 <div class="mb-3">
-                    <label for="pertemuan2" class="form-label">Pertemuan 2</label>
-                    <input type="text" class="form-control" id="pertemuan2" name="pertemuan2" value="{{$kartukendali->pertemuan2}}">
+                    <label for="minggu2" class="form-label">Minggu 2</label>
+                    <input type="text" class="form-control" id="minggu2" name="minggu2" value="{{$kartukendali->minggu2}}">
                 </div>
                 <div class="mb-3">
-                    <label for="pertemuan3" class="form-label">Pertemuan 3</label>
-                    <input type="text" class="form-control" id="pertemuan3" name="pertemuan3" value="{{$kartukendali->pertemuan3}}">
+                    <label for="minggu3" class="form-label">Minggu 3</label>
+                    <input type="text" class="form-control" id="minggu3" name="minggu3" value="{{$kartukendali->minggu3}}">
                 </div>
                 <div class="mb-3">
-                    <label for="pertemuan4" class="form-label">Pertemuan 4</label>
-                    <input type="text" class="form-control" id="pertemuan4" name="pertemuan4" value="{{$kartukendali->pertemuan4}}">
-                </div>
-                <div class="mb-3">
-                    <label for="pertemuan5" class="form-label">Pertemuan 5</label>
-                    <input type="text" class="form-control" id="pertemuan5" name="pertemuan5" value="{{$kartukendali->pertemuan5}}">
-                </div>
-                <div class="mb-3">
-                    <label for="pertemuan6" class="form-label">Pertemuan 6</label>
-                    <input type="text" class="form-control" id="pertemuan6" name="pertemuan6" value="{{$kartukendali->pertemuan6}}">
-                </div>
-                <div class="mb-3">
-                    <label for="pertemuan7" class="form-label">Pertemuan 7</label>
-                    <input type="text" class="form-control" id="pertemuan7" name="pertemuan7" value="{{$kartukendali->pertemuan7}}">
+                    <label for="minggu4" class="form-label">Minggu 4</label>
+                    <input type="text" class="form-control" id="minggu4" name="minggu4" value="{{$kartukendali->minggu4}}">
                 </div>
                 <div class="mb-3">
                     <label for="pencapaian" class="form-label">Pencapaian</label>
